@@ -9,20 +9,14 @@ import JS from "@/assets/logos/javascript.svg";
 import Mongo from "@/assets/logos/mongodb-logo.svg";
 import MySQL from "@/assets/logos/mysql-logo.svg";
 import Node from "@/assets/logos/node-js.svg";
-import ReactLogo from "@/assets/logos/react.svg"; // Renamed to avoid conflict with React
+import React from "@/assets/logos/react.svg";
 import Tailwind from "@/assets/logos/tailwindcss.svg";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useEffect, useState } from "react";
-import {
-  CircularProgressbarWithChildren,
-  buildStyles,
-} from "react-circular-progressbar";
+import { CircularProgressbarWithChildren } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 
 const Skills = () => {
   const skillsArray = [
-    { skill: ReactLogo, progress: 80 },
+    { skill: React, progress: 80 },
     { skill: Mongo, progress: 90 },
     { skill: Node, progress: 80 },
     { skill: Express, progress: 80 },
@@ -36,50 +30,21 @@ const Skills = () => {
     { skill: CSS, progress: 95 },
     { skill: Bootstrap, progress: 90 },
   ];
-
-  const [progressValues, setProgressValues] = useState(
-    skillsArray.map(() => 0),
-  );
-
-  gsap.registerPlugin(ScrollTrigger);
-  useEffect(() => {
-    skillsArray.forEach((skill, index) => {
-      gsap.to(
-        { value: 0 },
-        {
-          value: skill.progress,
-          duration: 1.5,
-          ease: "circ.in",
-          scrollTrigger: {
-            trigger: `.grid`,
-            start: "top 90%",
-          },
-          onUpdate: function () {
-            setProgressValues((prevValues) => {
-              const newValues = [...prevValues];
-              newValues[index] = this.targets()[0].value;
-              return newValues;
-            });
-          },
-        },
-      );
-    });
-  }, []);
-
   return (
     <div className="pt-20">
-      <h2 className="text-4xl font-semibold ml-10">My Skills:</h2>
+      <h2 className="text-4xl font-semibold ml-10 ">My Skills:</h2>
       <div className="grid lg:grid-cols-6 grid-cols-3 gap-10 w-[80%] m-auto mt-20">
-        {skillsArray.map((skill, index) => (
-          <CircularProgressbarWithChildren
-            className={`circle-${index}`}
-            value={progressValues[index]}
-            key={index}
-            styles={buildStyles({ pathColor: "#1ad1da" })}
-          >
-            <img src={skill.skill} alt="Logo" className="w-[50%]" />
-          </CircularProgressbarWithChildren>
-        ))}
+        {skillsArray.map((skill, index) => {
+          return (
+            <CircularProgressbarWithChildren
+              value={skill.progress}
+              key={index}
+              styles={{ path: { stroke: "#1ad1da" } }}
+            >
+              <img src={skill.skill} alt="Logo" className="w-[50%]" />
+            </CircularProgressbarWithChildren>
+          );
+        })}
       </div>
     </div>
   );
