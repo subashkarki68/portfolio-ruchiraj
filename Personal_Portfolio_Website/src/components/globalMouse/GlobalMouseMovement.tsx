@@ -34,6 +34,7 @@ const GlobalMouseMovement: React.FC = () => {
       <Circle size='sm' ref={addCircleRef} delay={0} />
       <Circle size='md' ref={addCircleRef} delay={0.1} />
       <Circle size='lg' ref={addCircleRef} delay={0.2} />
+      <Circle size='xl' ref={addCircleRef} delay={0.3} />
     </div>
   );
 };

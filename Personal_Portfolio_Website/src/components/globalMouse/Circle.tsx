@@ -2,7 +2,7 @@ import { gsap } from "gsap";
 import { forwardRef, useImperativeHandle, useRef } from "react";
 
 interface CircleProps {
-  size: "sm" | "md" | "lg";
+  size: "sm" | "md" | "lg" | "xl";
   delay: number;
 }
 

@@ -58,32 +58,7 @@
     --chart-5: 340 75% 55%;
   }
 }
-.circle {
-  position: fixed;
-  transform: translate(-50%, -50%);
-  top: 0;
-  left: 0;
-  opacity: 0.6;
-  border-radius: 50%;
-  z-index: 1;
-}
 
-.circle.sm {
-  width: 30px;
-  height: 30px;
-}
-
-.circle.md {
-  width: 60px;
-  height: 60px;
-}
-.gradient-blue {
-  background: linear-gradient(45deg, #60e5ec, #006a64);
-}
-.circle.lg {
-  width: 90px;
-  height: 90px;
-}
 @layer base {
   * {
     @apply border-border;
