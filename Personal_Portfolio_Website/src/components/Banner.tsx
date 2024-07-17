@@ -37,36 +37,36 @@ const Banner = () => {
     "Full Stack Developer",
   ];
   return (
-    <div className="relative w-full h-[100vh] flex items-center justify-center">
+    <div className='relative w-full h-[100svh] flex items-center justify-center'>
       {/* Banner Images */}
       <img
         src={bannerOther}
         //banner
-        alt="Banner Image"
-        className="w-full h-full object-cover hidden lg:block"
+        alt='Banner Image'
+        className='w-full h-full object-cover hidden lg:block'
       />
       <img
         src={bannerOther}
-        alt="Banner Image"
-        className="w-full h-full object-cover lg:hidden"
+        alt='Banner Image'
+        className='w-full h-full object-cover lg:hidden'
       />
 
       {/* Black Overlay */}
-      <div className="absolute top-0 left-0 w-full h-full bg-black lg:opacity-20 opacity-50"></div>
+      <div className='absolute top-0 left-0 w-full h-full bg-black lg:opacity-20 opacity-50'></div>
 
       {/* Ruchi Raj Picture */}
       <img
-        id="subashPP"
+        id='subashPP'
         src={subashPP}
-        alt="Ruchi Raj Picture"
-        className="absolute top-10 w-[50%] rounded-full object-cover lg:right-0 sm:right-0 sm:w-[30%]"
+        alt='Ruchi Raj Picture'
+        className='absolute top-10 w-[50%] rounded-full object-cover lg:right-0 sm:right-0 sm:w-[30%]'
       />
 
       {/* Text and Button */}
-      <div className="absolute left-10 top-1/2 transform -translate-y-1/2 text-white">
+      <div className='absolute left-10 top-1/2 transform -translate-y-1/2 text-white'>
         <div
-          id="typeWriter"
-          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-8xl"
+          id='typeWriter'
+          className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-8xl'
         >
           <TypewriterComponent
             options={{
@@ -76,13 +76,13 @@ const Banner = () => {
             }}
           />
         </div>
-        <p className="my-10 lg:w-[600px] md:w-[70%]" id="para">
+        <p className='my-10 lg:w-[600px] md:w-[70%]' id='para'>
           Passionate about crafting efficient and scalable web applications.
           Experienced in building intuitive user interfaces and robust backend
           systems. Let's create something amazing together!
         </p>
-        <a href={resumePDF} download="Ruchi_Raj_CV.pdf">
-          <Button id="downloadCV" className="text-md p-5 ">
+        <a href={resumePDF} download='Ruchi_Raj_CV.pdf'>
+          <Button id='downloadCV' className='text-md p-5 '>
             Download CV
           </Button>
         </a>
