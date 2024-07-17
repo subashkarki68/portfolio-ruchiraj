@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import Circle, { CircleHandle } from "./Circle";
+import "./style.css";
 
 const GlobalMouseMovement: React.FC = () => {
   const circleRefs = useRef<CircleHandle[]>([]);
