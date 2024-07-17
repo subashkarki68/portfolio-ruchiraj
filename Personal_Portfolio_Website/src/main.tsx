@@ -1,4 +1,5 @@
 import * as Sentry from "@sentry/react";
+import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import React from "react";
 import { isMobile } from "react-device-detect";
@@ -48,6 +49,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     {!isMobile && <GlobalMouseMovement />}
     <SpeedInsights />
+    <Analytics />
     <WithLoading>
       <RouterProvider router={router} />
     </WithLoading>
