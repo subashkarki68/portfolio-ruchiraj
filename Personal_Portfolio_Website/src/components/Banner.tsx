@@ -94,7 +94,6 @@ const Banner = () => {
           </Button>
         </a>
         <br /> */}
-        <button onClick={() => methodDoesNotExist()}>Break the world</button>;
         <div className='wrapper mt-16'>
           <FancyButton
             text='Download CV'
