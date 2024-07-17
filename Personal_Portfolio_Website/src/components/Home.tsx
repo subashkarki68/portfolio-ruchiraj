@@ -1,7 +1,7 @@
-import bannerOther from "@/assets/banner-other.png";
-import banner from "@/assets/banner.png";
+import bannerOther from "@/assets/compressed/banner-other.webp";
+import banner from "@/assets/compressed/banner.webp";
+import subashPP from "@/assets/compressed/subashPP.webp";
 import resumePDF from "@/assets/pdf/91-resume_ruchi_raj_karki.pdf";
-import subashPP from "@/assets/subashPP.png";
 import TypewriterComponent from "typewriter-effect";
 import { Button } from "./ui/button";
 
