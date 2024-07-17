@@ -1,7 +1,9 @@
 import React from "react";
+import { isMobile } from "react-device-detect";
 import ReactDOM from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Home from "./assets/pages/Home.tsx";
+import GlobalMouseMovement from "./components/GlobalMouseMovement.tsx";
 import WithLoading from "./components/WithLoading.tsx";
 import ErrorPage from "./error-page.tsx";
 import "./globals.css";
@@ -20,8 +22,9 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
+    {!isMobile && <GlobalMouseMovement />}
     <WithLoading>
       <RouterProvider router={router} />
     </WithLoading>
-  </React.StrictMode>,
+  </React.StrictMode>
 );

@@ -19,7 +19,7 @@ const MainNav = () => {
   return (
     <div
       id="navbar_main"
-      className="mr-4 hidden gap-2 md:flex w-full justify-between items-center"
+      className="mr-4 hidden gap-2 md:flex w-full justify-between items-center z-10"
     >
       <Link to={"/"} className="text-xl font-semibold">
         Ruchi Raj Karki
