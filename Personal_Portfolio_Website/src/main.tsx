@@ -1,3 +1,4 @@
+import GlobalMouseMovement from "@/components/globalMouse/GlobalMouseMovement.tsx";
 import * as Sentry from "@sentry/react";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
@@ -6,7 +7,6 @@ import { isMobile } from "react-device-detect";
 import ReactDOM from "react-dom/client";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Home from "./assets/pages/Home.tsx";
-import GlobalMouseMovement from "./components/GlobalMouseMovement.tsx";
 import WithLoading from "./components/WithLoading.tsx";
 import ErrorPage from "./error-page.tsx";
 import "./globals.css";
@@ -53,5 +53,5 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
     <WithLoading>
       <RouterProvider router={router} />
     </WithLoading>
-  </React.StrictMode>,
+  </React.StrictMode>
 );

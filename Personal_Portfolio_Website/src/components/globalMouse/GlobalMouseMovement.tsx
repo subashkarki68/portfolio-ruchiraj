@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import Circle, { CircleHandle } from "./Circle";
+import "./index.css";
 
 const GlobalMouseMovement: React.FC = () => {
   const circleRefs = useRef<CircleHandle[]>([]);
@@ -10,7 +11,7 @@ const GlobalMouseMovement: React.FC = () => {
   useEffect(() => {
     const { innerWidth, innerHeight } = window;
     circleRefs.current.forEach((ref) =>
-      ref.moveTo(innerWidth / 2, innerHeight / 2),
+      ref.moveTo(innerWidth / 2, innerHeight / 2)
     );
 
     const onMove = ({ clientX, clientY }: MouseEvent) => {
@@ -29,10 +30,10 @@ const GlobalMouseMovement: React.FC = () => {
   };
 
   return (
-    <div className="app">
-      <Circle size="sm" ref={addCircleRef} delay={0} />
-      <Circle size="md" ref={addCircleRef} delay={0.1} />
-      <Circle size="lg" ref={addCircleRef} delay={0.2} />
+    <div className='app'>
+      <Circle size='sm' ref={addCircleRef} delay={0} />
+      <Circle size='md' ref={addCircleRef} delay={0.1} />
+      <Circle size='lg' ref={addCircleRef} delay={0.2} />
     </div>
   );
 };
