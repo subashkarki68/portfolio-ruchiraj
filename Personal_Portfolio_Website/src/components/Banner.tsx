@@ -1,11 +1,11 @@
 import bannerOther from "@/assets/compressed/banner-other.webp";
 import subashPP from "@/assets/compressed/subashPP.webp";
-import resumePDF from "@/assets/pdf/91-resume_ruchi_raj_karki.pdf";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { DownloadIcon } from "lucide-react";
 import { useEffect } from "react";
 import TypewriterComponent from "typewriter-effect";
+import FancyButton from "./FancyButton";
 
 const Banner = () => {
   const hoverTL = gsap.timeline();
@@ -32,17 +32,6 @@ const Banner = () => {
       delay: 0.9,
       ease: "power2.out",
       stagger: 0.2,
-    });
-    hoverTL.to(".pink", {
-      width: "calc(100% + 1.5rem)",
-      ease: "elastic.Out(0.25)",
-      duration: 0.5,
-    });
-    hoverTL.to(".pink", {
-      width: "2em",
-      left: "calc(100% - 2rem)",
-      ease: "elastic.Out(0.25)",
-      duration: 0.5,
     });
   });
   useEffect(() => {}, []);
@@ -105,18 +94,14 @@ const Banner = () => {
           </Button>
         </a>
         <br /> */}
+        <button onClick={() => methodDoesNotExist()}>Break the world</button>;
         <div className='wrapper mt-16'>
-          <a
-            href={resumePDF}
-            download='Ruchi_Raj_CV.pdf'
-            className='link text-white text-2xl font-bold relative text-center p-5'
-            onMouseOver={() => hoverTL.play()}
-            onMouseLeave={() => hoverTL.reverse()}
-          >
-            <div className='pink w-8 h-8 p-6 rounded-full bg-midnight_green-600 absolute top-1/2 transform -translate-y-1/2 -left-2'></div>
-            <span className='relative'>Download CV</span>
-            <DownloadIcon className='ml-4 bottom-1 left-[1.5rem] relative inline-block' />
-          </a>
+          <FancyButton
+            text='Download CV'
+            icon={
+              <DownloadIcon className='ml-4 bottom-1 left-[1.5rem] relative inline-block' />
+            }
+          />
         </div>
       </div>
     </div>

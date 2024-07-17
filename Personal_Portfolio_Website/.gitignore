@@ -64,3 +64,6 @@ packages/react-devtools-fusebox/dist
 packages/react-devtools-inline/dist
 packages/react-devtools-shell/dist
 packages/react-devtools-timeline/dist
+
+# Sentry Config File
+.env.sentry-build-plugin
