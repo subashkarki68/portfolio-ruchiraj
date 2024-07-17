@@ -1,5 +1,5 @@
 import * as Sentry from "@sentry/react";
-import { SpeedInsights } from "@vercel/speed-insights/next";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 import React from "react";
 import { isMobile } from "react-device-detect";
 import ReactDOM from "react-dom/client";
