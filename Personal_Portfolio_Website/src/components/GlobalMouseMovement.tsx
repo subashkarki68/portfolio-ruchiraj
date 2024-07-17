@@ -10,7 +10,7 @@ const GlobalMouseMovement: React.FC = () => {
   useEffect(() => {
     const { innerWidth, innerHeight } = window;
     circleRefs.current.forEach((ref) =>
-      ref.moveTo(innerWidth / 2, innerHeight / 2)
+      ref.moveTo(innerWidth / 2, innerHeight / 2),
     );
 
     const onMove = ({ clientX, clientY }: MouseEvent) => {

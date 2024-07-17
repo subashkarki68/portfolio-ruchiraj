@@ -26,13 +26,13 @@ const FancyButton = ({ text, icon }: FancyButtonProps) => {
   return (
     <a
       href={resumePDF}
-      download='Ruchi_Raj_CV.pdf'
-      className='link text-white text-2xl font-bold relative text-center p-5'
+      download="Ruchi_Raj_CV.pdf"
+      className="link text-white text-2xl font-bold relative text-center p-5"
       onMouseOver={() => hoverTL.play()}
       onMouseLeave={() => hoverTL.reverse()}
     >
-      <div className='pink w-8 h-8 p-6 rounded-full bg-midnight_green-600 absolute top-1/2 transform -translate-y-1/2 -left-2'></div>
-      <span className='relative'>{text}</span>
+      <div className="pink w-8 h-8 p-6 rounded-full bg-midnight_green-600 absolute top-1/2 transform -translate-y-1/2 -left-2"></div>
+      <span className="relative">{text}</span>
       {icon}
     </a>
   );

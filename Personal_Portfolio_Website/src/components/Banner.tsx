@@ -41,36 +41,36 @@ const Banner = () => {
     "Full Stack Developer",
   ];
   return (
-    <div className='relative w-full h-[100svh] flex items-center justify-center'>
+    <div className="relative w-full h-[100svh] flex items-center justify-center">
       {/* Banner Images */}
       <img
         src={bannerOther}
         //banner
-        alt='Banner Image'
-        className='w-full h-full object-cover hidden lg:block'
+        alt="Banner Image"
+        className="w-full h-full object-cover hidden lg:block"
       />
       <img
         src={bannerOther}
-        alt='Banner Image'
-        className='w-full h-full object-cover lg:hidden'
+        alt="Banner Image"
+        className="w-full h-full object-cover lg:hidden"
       />
 
       {/* Black Overlay */}
-      <div className='absolute top-0 left-0 w-full h-full bg-black lg:opacity-20 opacity-50'></div>
+      <div className="absolute top-0 left-0 w-full h-full bg-black lg:opacity-20 opacity-50"></div>
 
       {/* Ruchi Raj Picture */}
       <img
-        id='subashPP'
+        id="subashPP"
         src={subashPP}
-        alt='Ruchi Raj Picture'
-        className='absolute top-10 w-[50%] rounded-full object-cover lg:right-0 sm:right-0 sm:w-[30%]'
+        alt="Ruchi Raj Picture"
+        className="absolute top-10 w-[50%] rounded-full object-cover lg:right-0 sm:right-0 sm:w-[30%]"
       />
 
       {/* Text and Button */}
-      <div className='absolute mt-10 left-10 top-1/2 transform -translate-y-1/2 text-white z-10'>
+      <div className="absolute mt-10 left-10 top-1/2 transform -translate-y-1/2 text-white z-10">
         <div
-          id='typeWriter'
-          className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-8xl select-none'
+          id="typeWriter"
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-8xl select-none"
         >
           <TypewriterComponent
             options={{
@@ -80,7 +80,7 @@ const Banner = () => {
             }}
           />
         </div>
-        <p className='mt-20 lg:w-[600px] md:w-[70%] z-10 select-none' id='para'>
+        <p className="mt-20 lg:w-[600px] md:w-[70%] z-10 select-none" id="para">
           Passionate about crafting efficient and scalable web applications.
           Experienced in building intuitive user interfaces and robust backend
           systems. Let's create something amazing together!
@@ -94,11 +94,11 @@ const Banner = () => {
           </Button>
         </a>
         <br /> */}
-        <div className='wrapper mt-16'>
+        <div className="wrapper mt-16">
           <FancyButton
-            text='Download CV'
+            text="Download CV"
             icon={
-              <DownloadIcon className='ml-4 bottom-1 left-[1.5rem] relative inline-block' />
+              <DownloadIcon className="ml-4 bottom-1 left-[1.5rem] relative inline-block" />
             }
           />
         </div>

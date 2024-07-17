@@ -5,10 +5,13 @@ import { defineConfig } from "vite";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), sentryVitePlugin({
-    org: "subash-26",
-    project: "ruchi-raj-portfolio"
-  })],
+  plugins: [
+    react(),
+    sentryVitePlugin({
+      org: "subash-26",
+      project: "ruchi-raj-portfolio",
+    }),
+  ],
 
   resolve: {
     alias: {
@@ -17,6 +20,6 @@ export default defineConfig({
   },
 
   build: {
-    sourcemap: true
-  }
+    sourcemap: true,
+  },
 });

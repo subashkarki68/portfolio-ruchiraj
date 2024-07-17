@@ -22,7 +22,7 @@ const Circle = forwardRef<CircleHandle, CircleProps>(({ size, delay }, ref) => {
         }
       },
     }),
-    [delay]
+    [delay],
   );
 
   return <div className={`circle ${size} gradient-blue`} ref={el}></div>;
