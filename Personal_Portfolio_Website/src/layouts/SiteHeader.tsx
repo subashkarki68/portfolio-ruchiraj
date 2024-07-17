@@ -3,8 +3,8 @@ import MobileNav from "./Navbar/MobileNav";
 
 const SiteHeader = () => {
   return (
-    <header className='w-full border-b'>
-      <div className='flex h-14 px-4'>
+    <header id="site_header" className="w-full border-b">
+      <div className="flex h-14 px-4">
         <MainNav />
         <MobileNav />
       </div>

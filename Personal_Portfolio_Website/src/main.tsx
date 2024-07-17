@@ -1,7 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Home from "./components/Home.tsx";
+import Home from "./assets/pages/Home.tsx";
+import WithLoading from "./components/WithLoading.tsx";
 import ErrorPage from "./error-page.tsx";
 import "./globals.css";
 import HomeLayout from "./layouts/HomeLayout.tsx";
@@ -19,6 +20,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
-  </React.StrictMode>
+    <WithLoading>
+      <RouterProvider router={router} />
+    </WithLoading>
+  </React.StrictMode>,
 );

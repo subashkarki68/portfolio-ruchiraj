@@ -17,15 +17,15 @@ const MobileNav = () => {
   return (
     <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger asChild>
-        <Button variant={"ghost"} size={"icon"} className='md:hidden'>
+        <Button variant={"ghost"} size={"icon"} className="md:hidden">
           <MenuIcon />
         </Button>
       </SheetTrigger>
       <SheetContent side={"left"}>
-        <SheetHeader aria-description='Navbar'>
+        <SheetHeader aria-description="Navbar">
           <SheetTitle hidden>Navbar</SheetTitle>
           <div
-            className='flex flex-col items-start'
+            className="flex flex-col items-start"
             onClick={(e) => {
               const target = e.target as HTMLElement;
               if (target.tagName === "BUTTON") return setOpen(false);

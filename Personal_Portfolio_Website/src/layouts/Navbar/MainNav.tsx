@@ -1,3 +1,5 @@
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 import { Link } from "react-router-dom";
 
 const navItems = [
@@ -8,10 +10,21 @@ const navItems = [
 ];
 
 const MainNav = () => {
+  useGSAP(() => {
+    gsap.from("#navbar_main", {
+      y: -100,
+      ease: "power1.inOut",
+    });
+  });
   return (
-    <div className='mr-4 hidden gap-2 md:flex w-full justify-between items-center'>
-      <Link to={"/"}>logo</Link>
-      <div className='flex gap-16'>
+    <div
+      id="navbar_main"
+      className="mr-4 hidden gap-2 md:flex w-full justify-between items-center"
+    >
+      <Link to={"/"} className="text-xl font-semibold">
+        Ruchi Raj Karki
+      </Link>
+      <div className="flex gap-16">
         {navItems.map((item, index) => (
           <Link key={index} to={item.to}>
             {item.text}
