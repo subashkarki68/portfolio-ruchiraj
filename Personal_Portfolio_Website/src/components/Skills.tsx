@@ -1,9 +1,7 @@
 import Bootstrap from "@/assets/logos/bootstrap-4-logo.svg";
 import CSS from "@/assets/logos/css-3-logo.svg";
-import {
-  default as Express,
-  default as Firebase,
-} from "@/assets/logos/express.svg";
+import Express from "@/assets/logos/express.svg";
+import Firebase from "@/assets/logos/firebase-1-logo.svg";
 import Git from "@/assets/logos/git.svg";
 import Github from "@/assets/logos/github.svg";
 import React from "@/assets/logos/react.svg";
@@ -27,7 +25,7 @@ const Skills = () => {
       </CircularProgressbarWithChildren>
       {skillsArray.map((skill, index) => {
         return (
-          <CircularProgressbarWithChildren value={skill.progress}>
+          <CircularProgressbarWithChildren value={skill.progress} key={index}>
             <img
               src={skill.skill}
               alt={skill.skill.split("/").pop()?.replace(".svg", "")}
