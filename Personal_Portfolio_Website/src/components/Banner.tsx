@@ -85,15 +85,6 @@ const Banner = () => {
           Experienced in building intuitive user interfaces and robust backend
           systems. Let's create something amazing together!
         </p>
-        {/* <a href={resumePDF} download='Ruchi_Raj_CV.pdf'>
-          <Button
-            id='downloadCV'
-            className='text-md px-10 py-6 bg-midnight_green-700 text-black mt-10 hover:bg-midnight_green-900'
-          >
-            Download CV
-          </Button>
-        </a>
-        <br /> */}
         <div className="wrapper mt-16">
           <FancyButton
             text="Download CV"
