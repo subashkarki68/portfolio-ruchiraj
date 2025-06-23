@@ -1,4 +1,4 @@
-import resumePDF from "@/assets/pdf/chaitra_ruchi_raj.pdf";
+import resumePDF from "@/assets/pdf/resume_ruchi_raj_karki.pdf";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
